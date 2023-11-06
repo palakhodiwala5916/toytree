@@ -1,0 +1,100 @@
+<?php
+
+namespace App\Controller\Admin\\{{pathCase relativePath}};
+
+use App\Controller\AbstractApiController;
+use App\DependencyInjection\Service\Data\\{{pathCase relativePath}}\\{{properCase entityName}}ServiceDI;
+use App\Entity\\{{pathCase relativePath}}\\{{properCase entityName}};
+use App\Exception\ApiException;
+use App\Exception\SoftException;
+use App\VO\Protocol\Api\\{{pathCase relativePath}}\\{{properCase entityName}}Filters;
+use App\VO\Protocol\Api\\{{pathCase relativePath}}\\{{properCase entityName}}Body;
+use App\VO\Protocol\ApiResponseBody;
+use App\VO\Protocol\PaginationData;
+use FOS\RestBundle\Controller\Annotations as Rest;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+
+/**
+ * @Rest\Route("/api/admin/{{lowerCase (dashCase entityName)}}", name="api_admin_{{lowerCase (snakeCase entityName)}}_")
+ */
+final class {{properCase entityName}}AdminController extends AbstractApiController
+{
+    use {{properCase entityName}}ServiceDI;
+
+    /**
+     * @Rest\Get("/list", name="list")
+     * @ParamConverter("filters", converter="app.param_converter.request_query")
+     * @Rest\View(serializerGroups={"api", "admin:list"})
+     * @throws ApiException
+     */
+    public function list(Request $request, {{properCase entityName}}Filters $filters): PaginationData
+    {
+        return $this->{{camelCase entityName}}Service->filterObjects($filters);
+    }
+
+    /**
+     * @Rest\Get("/search", name="search")
+     * @ParamConverter("filters", converter="app.param_converter.request_query")
+     * @Rest\View(serializerGroups={"search"})
+     * @throws ApiException
+    */
+    public function search(Request $request, SearchFilters $filters): array
+    {
+        return $this->{{camelCase entityName}}Service->search($filters);
+    }
+
+    /**
+     * @Rest\Get("/{id}/view", name="view")
+     * @ParamConverter("id")
+     * @Rest\View(serializerGroups={"api", "admin:view"})
+     */
+    public function view(Request $request, {{properCase entityName}} ${{camelCase entityName}}): {{properCase entityName}}
+    {
+        return ${{camelCase entityName}};
+    }
+
+    /**
+     * @Rest\Delete("/{id}/delete", name="delete")
+     * @ParamConverter("id")
+     * @Rest\View(serializerGroups={"api", "admin:view"})
+     */
+    public function delete(Request $request, {{properCase entityName}} ${{camelCase entityName}}): ApiResponseBody
+    {
+        $this->{{camelCase entityName}}Service->deleteObject(${{camelCase entityName}});
+
+        return new ApiResponseBody(true, null);
+    }
+
+    /**
+     * @Rest\Post("/create", name="create")
+     * @ParamConverter("body", converter="fos_rest.request_body")
+     * @Rest\View(serializerGroups={"api", "admin:view"})
+     * @throws SoftException
+     */
+    public function create(Request $request, {{properCase entityName}}Body $body): {{properCase entityName}}
+    {
+        ${{camelCase entityName}} = new {{properCase entityName}}();
+        // TODO: add any specific validation on create, if applicable
+
+        $this->{{camelCase entityName}}Service->updateObjectFields(${{camelCase entityName}}, $body);
+
+        return ${{camelCase entityName}};
+    }
+
+    /**
+     * @Rest\Put("/{id}/update", name="update")
+     * @ParamConverter("id")
+     * @ParamConverter("body", converter="fos_rest.request_body")
+     * @Rest\View(serializerGroups={"api", "admin:view"})
+     * @throws SoftException
+     */
+    public function update(Request $request, {{properCase entityName}} ${{camelCase entityName}}, {{properCase entityName}}Body $body): {{properCase entityName}}
+    {
+        $this->{{camelCase entityName}}Service->updateObjectFields(${{camelCase entityName}}, $body);
+
+        return ${{camelCase entityName}};
+    }
+
+}

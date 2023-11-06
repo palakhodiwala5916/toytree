@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Repository\\{{pathCase relativePath}};
+
+use App\Entity\\{{pathCase relativePath}}\\{{properCase entityName}};
+use App\Repository\ExtendedEntityRepository;
+use App\VO\Protocol\Api\\{{pathCase relativePath}}\\{{properCase entityName}}Filters;
+use Doctrine\ORM\QueryBuilder;
+
+/**
+ * @method {{properCase entityName}}|null find($id, $lockMode = null, $lockVersion = null)
+ * @method {{properCase entityName}}|null findOneBy(array $criteria, array $orderBy = null)
+ * @method {{properCase entityName}}[]|array findAll()
+ * @method {{properCase entityName}}[]|array findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method {{properCase entityName}}[]|array filterBy($filters)
+ */
+final class {{properCase entityName}}Repository extends ExtendedEntityRepository
+{
+
+    /**
+     * @param {{properCase entityName}}Filters $filters
+     */
+    protected function buildQuery($filters): QueryBuilder
+    {
+        return $this->createQueryBuilder('o');
+    }
+
+}

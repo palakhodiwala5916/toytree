@@ -1,0 +1,18 @@
+<?php
+
+namespace App\DependencyInjection\Repository\\{{pathCase relativePath}};
+
+use App\Repository\\{{pathCase relativePath}}\\{{properCase entityName}}Repository;
+
+trait {{properCase entityName}}RepositoryDI
+{
+    protected {{properCase entityName}}Repository ${{camelCase entityName}}Repository;
+
+    /**
+     * @required
+     */
+    public function set{{properCase entityName}}Repository({{properCase entityName}}Repository ${{camelCase entityName}}Repository)
+    {
+        $this->{{camelCase entityName}}Repository = ${{camelCase entityName}}Repository;
+    }
+}

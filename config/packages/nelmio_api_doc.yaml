@@ -1,0 +1,22 @@
+nelmio_api_doc:
+    models: { use_jms: false }
+    documentation:
+        info:
+            title: Toy API
+            description: REST API Documentation !
+            version: 1.0.0
+        components:
+            securitySchemes:
+                Bearer:
+                    type: http
+                    scheme: bearer
+                    bearerFormat: JWT
+    #            security:
+    #                - Bearer: [ ]
+#    areas: # to filter documented areas
+#        path_patterns:
+#            - ^/api(?!/doc$) # Accepts routes under /api except /api/doc
+
+    areas:
+        default:
+            path_patterns: [ ^/api/v1/toy/list, ^/api/v1/user, ^/api/v1/login, ^/api/v1/login/facebook, ^/api/v1/login/google, ^/api/v1/login/apple, ^/api/v1/reset-password, ^/api/v1/register, ^/api/v1/verify-otp, ^/api/v1/resend-otp ]

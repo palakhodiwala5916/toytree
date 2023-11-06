@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ryde API Docs</title>
+    <!-- needed for adaptive design -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700" rel="stylesheet">
+
+    <!-- Redoc doesn't change outer page styles -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<div style="padding: 2rem;">
+    <h3>Explore documentation</h3>
+    <li><a href="/doc/default" target="_blank" style="text-decoration: none; color: black"><b>User / Common</b></a></li><br/>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/redoc@latest/bundles/redoc.standalone.js"></script>
+{#<script>#}
+{#    const eventSource = new EventSource("{{ mercure('send-message-a63d7126-bf00-461a-b911-c880d5c38b01')|escape('js') }}");#}
+{#    eventSource.onmessage = event => {#}
+{#        // Will be called every time an update is published by the serve#}
+{#        console.log(event.data);#}
+{#    }#}
+{#</script>#}
+</body>
+</html>

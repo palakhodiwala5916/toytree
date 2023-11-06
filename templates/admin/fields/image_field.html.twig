@@ -1,0 +1,9 @@
+{% extends '@SonataAdmin/CRUD/base_show_field.html.twig' %}
+
+{% block field %}
+    {% if value %}
+        <a href="{{ asset('upload/user/'~ value) }}" target="_blank">
+            <img src="{{ asset('upload/user/'~ value) }}" alt="" class="admin-preview" width="60">
+        </a>
+    {% endif %}
+{% endblock %}

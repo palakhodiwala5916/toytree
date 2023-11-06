@@ -1,0 +1,179 @@
+search_filter:
+  request:
+    text_value.required: Text value is required
+    target_property.required: Target property is required
+
+
+login:
+  auth.user.invalid: Invalid User
+  auth.token.invalid: Token Invalid
+  request:
+    username.required: Please enter a valid email address
+    password.required: Please enter the password
+    token.required:auth.token.invalid: Token Invalid
+
+user:
+  not_found: User not found
+  reset:
+    confirmation.email.required: Email is required
+    confirmation.email.invalid: Please enter valid email address
+    confirmation.code.required: Confirmation code is required
+  already.in_customer_mode: You are already in customer mode
+  already.in_owner_mode: You are already in owner mode
+  already.approved: User already approved
+  change.notification.required: Notification id required
+  change.notification_setting.required: Notification Setting id required
+  notification.not_found: Notification not found
+  notification.required: Notification is required
+  notification_setting_id.not_found: Notification setting not found
+  notification_setting_id.already_disable: Notification setting is already disabled
+  usernotification.not_found: User not found for this notification setting
+  notification_id.already_enable: This User notification is already enable make it disable
+
+  change.email.new_email.required: To change email new email required
+  change.password.currentPassword.required: Current Password required
+  change.password.newPassword.required: New Password required
+  change.password.reEnterPassword.required: Re Enter Password required
+  change.new.password.minLength: Password must be at least 8 characters
+  change.re_enter.password.minLength: Password must be at least 8 characters
+  change.new.password.notMatch: New password and Re-enter password do not match
+  change.profile_picture.required: Profile Picture required
+  update.country_code.required: Country code is required
+  update.phone_number.required: Phone number is required
+  auth.invalid_current_password: Your Current password doesn't match with old password
+  manual_transmission.valid: Manual transmission is not valid
+  close.account.reason.required: Please tell us a reason to close your account
+  close.account.description.required: For close your account more brief description is required
+
+register:
+  request.full_name.required: Full name required
+  request.phone_number.required: Phone number required
+  request.role.required: Role required
+  request.username.exists: Email already exist
+  request.password.too_short: Password must be at least 8 characters
+  request.username.required: Please enter a valid email address
+  request.password.required: Please enter the password
+  request.confirm_password.required: Confirm password is required
+  request.password.not_match: Password and confirmation password do not match
+
+verifyOTP:
+  request:
+    otp.required: Please enter the OTP
+    incorrect.code: Please enter the correct confirmation code
+    expired.code: Confirmation code is expired
+    action.valid: verify OTP action not valid
+    action.required: verify OTP action required
+
+car_type:
+  request:
+    type.required: Please enter car type
+
+review:
+  request:
+    car.required: Car Id is required
+
+rental_car:
+  request:
+    type.required: Ride type is required
+    car.required: Car type is required
+    pickup_address.required: Pickup address is required
+    pickupLatitude.required: Pickup latitude is required
+    pickupLongitude.required: Pickup longitude is required
+    dropOffAddress.required: Drop off address is required
+    dropOffLatitude.required: Drop off latitude is required
+    ropOffLongitude.required: Drop off longitude is required
+    from_date_time.required: From data time is required
+    to_date_time.required: To data time is required
+    log.required: Log is required
+    amount.required: Amount is required
+    transaction_hash.required: Transaction hash is required
+    payment_method.required: Payment method is required
+    payment_status.required: Payment status is required
+  error:
+    type.not_found: Ride type must be booked or history
+    from_date_time.not_valid: From date time must not be less then today
+    to_date_time.not_valid: To date time must be greater then from date time
+    payment_status.not_valid: Payment status must ne pending or completed
+    booking_already_exist: Booking already exist for selected date
+driver_license:
+  request:
+    first_name.required: First name is required
+    last_name.required: Last name is required
+    country.required: Country is required
+    parish.required: Parish is required
+    license_number.required: License number is required
+    date_of_birth.required: Date of birth is required
+    expiration_date.required: Expiration date is required
+
+card:
+  request:
+    source.required: Source is required
+
+call:
+  request:
+    receiver.required: Receiver is required
+    duration.required: Call duration is required
+
+api:
+  auth.invalid_credentials: Invalid Credentials
+  auth.invalid_email: Please enter valid email address
+  auth.invalid_password: Invalid password
+  auth.verified_account: Your email is not verified. Please verify it
+  auth.de_active.account: Your account has been deactivated
+
+favourite_car:
+  request.car.required: Car is required
+  error.already_added: Car already added to favourite
+  error.not_added: Car not added to favourite
+
+chat:
+  request:
+    receiver.required: Receiver is required
+    message.required: Message is required
+    toUser.required: To user is required
+
+something_went_wrong: Something went wrong
+object.error.not_found: Object not found
+object.error.permission_denied: You don't have permission to update. Please contact administrator.
+object.error.already_exits: Object already exits
+
+car:
+  not.available.owner: Car is not available for this owner
+  car_type.required: Car type required
+  car_brand.required: Car brand is required
+  description.required: Car description is required
+  name.required: Car name is required
+  model.required: Car model required
+  make.required: Car make required
+  year.required: Car Year required
+  market_value.required: Car market value required
+  transmission.required: Car transmission required
+  type.not_found: Car Type not found
+  brand.not_found: Car Brand not Found
+  feature.not.found: Car Feature not found
+  country.not_found: Car country not found
+  parish.not_found: Car parish not found
+  vehicle_detail.country.required: Car owner vehicle detail country required
+  vehicle_detail.street_address.required: Car owner vehicle street address required
+  vehicle_detail.city.required: Car owner vehicle city required
+  vehicle_detail.latitude.required: Car owner vehicle latitude required
+  vehicle_detail.longitude.required: Car owner vehicle longitude required
+  vehicle_detail.parish.required: Car owner vehicle parish required
+  vehicle_detail.zip_postal_code.required: Car owner vehicle zip postal code required
+  VIN_number.required: Car VIN Number required
+  is_model_year_1980_older.required: Your car modal year is older then 1980 required
+  feature.not_found: Car feature not found
+  information.not_found: Car information not found
+  not_found: Car not found
+
+car_asset:
+  car.required: Car is required
+  file.required: Car image is required
+
+
+resendOTP:
+  request:
+    email.required: Please enter the email
+    email.not_found: Email mot found
+    action.required: Please enter action
+    action.in_valid: Please enter valid action

@@ -1,0 +1,22 @@
+<?php
+
+namespace App\VO\Protocol\Api\\{{pathCase relativePath}};
+
+use App\VO\Protocol\RequestBodyInterface;
+use JMS\Serializer\Annotation as Serializer;
+use Symfony\Component\Validator\Constraints as Assert;
+
+final class {{properCase entityName}}Body implements RequestBodyInterface
+{
+    {{#each proprieties}}
+
+    /**
+    {{#if (isAllowedType type)}}
+     * @Serializer\Type("{{isAllowedType type}}")
+     * @Assert\NotBlank(message="{{lowercase ../entityName}}.create.{{name}}.required")
+     {{/if}}
+     */
+    public {{#if (isAllowedType type)}}{{isAllowedType type}}{{else}}mixed{{/if}} ${{name}};
+    {{/each}}
+
+}

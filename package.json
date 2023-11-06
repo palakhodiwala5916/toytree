@@ -1,0 +1,9 @@
+{
+  "name": "toy",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "plop": "^3.0.5",
+    "pluralize": "^8.0.0"
+  }
+}

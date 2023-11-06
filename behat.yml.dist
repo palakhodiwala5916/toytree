@@ -1,0 +1,195 @@
+default:
+    suites:
+        core_features:
+            paths: [ '%paths.base%/features/core' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+
+        account_setting_feature:
+            paths: [ '%paths.base%/features/data/common/user' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Common\AccountSettingContext
+
+        faq_features:
+            paths: [ '%paths.base%/features/data/common/faq' ]
+            contexts:
+                - App\Tests\Behat\Data\Common\Faq\FaqContext
+
+        country_features:
+            paths: [ '%paths.base%/features/data/common/country' ]
+            contexts:
+                - App\Tests\Behat\Data\Common\Country\CountryContext
+
+        language_features:
+            paths: [ '%paths.base%/features/data/common/language' ]
+            contexts:
+                - App\Tests\Behat\Data\Common\Language\LanguageContext
+
+        customer_call_features:
+            paths: [ '%paths.base%/features/data/customer/call' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Customer\Call\CallContext
+
+        customer_chat_features:
+            paths: [ '%paths.base%/features/data/customer/chat' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Customer\Chat\ChatContext
+
+        customer_car_features:
+            paths: [ '%paths.base%/features/data/customer/car' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Customer\Car\CarContext
+                - App\Tests\Behat\Data\Customer\Car\FavouriteCarContext
+
+        customer_parish_features:
+            paths: [ '%paths.base%/features/data/customer/parish' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Customer\Parish\ParishContext
+
+        customer_offer_features:
+            paths: [ '%paths.base%/features/data/customer/offer' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Customer\Offer\OfferContext
+
+        customer_review_features:
+            paths: [ '%paths.base%/features/data/customer/review' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Customer\Review\ReviewContext
+
+        customer_driver_features:
+            paths: [ '%paths.base%/features/data/customer/driver' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Customer\Driver\DriverContext
+
+        customer_insurance_protection_features:
+            paths: [ '%paths.base%/features/data/customer/insurance' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Customer\Insurance\InsuranceContext
+
+        customer_card_features:
+            paths: [ '%paths.base%/features/data/customer/payment' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Customer\Payment\CardContext
+
+        customer_rental_car_features:
+            paths: [ '%paths.base%/features/data/customer/rental-car' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Customer\RentalCar\RentalCarContext
+
+        customer_contact_features:
+             paths: [ '%paths.base%/features/data/customer/contact' ]
+             contexts:
+                 - App\Tests\Behat\Core\AuthContext
+                 - App\Tests\Behat\Data\Customer\Contact\ContactContext
+
+        customer_notification_features:
+            paths: [ '%paths.base%/features/data/customer/notification' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Customer\Notification\NotificationContext
+
+        customer_switch_to_owner_features:
+            paths: [ '%paths.base%/features/data/customer/user' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Customer\User\SwitchToOwnerContext
+
+        customer_user_wallet_features:
+            paths: [ '%paths.base%/features/data/customer/user-wallet' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Customer\UserWallet\UserWalletContext
+
+        customer_transaction_features:
+            paths: [ '%paths.base%/features/data/customer/transaction' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Customer\Transaction\TransactionContext
+
+        customer_close_account_features:
+            paths: [ '%paths.base%/features/data/customer/close-account' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Customer\CloseAccount\CloseAccountContext
+
+        owner_car_features:
+            paths: [ '%paths.base%/features/data/owner/car' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Owner\Car\CarOwnerContext
+
+        owner_parish_features:
+            paths: [ '%paths.base%/features/data/owner/parish' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Owner\Parish\ParishContext
+
+        owner_contact_features:
+            paths: [ '%paths.base%/features/data/owner/contact' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Owner\Contact\ContactContext
+
+        owner_review_features:
+            paths: [ '%paths.base%/features/data/owner/review' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Owner\Review\ReviewContext
+
+        owner_call_features:
+            paths: [ '%paths.base%/features/data/owner/call' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Owner\Call\CallContext
+
+        owner_chat_features:
+            paths: [ '%paths.base%/features/data/owner/chat' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Owner\Chat\ChatContext
+
+        owner_rental_car_features:
+            paths: [ '%paths.base%/features/data/owner/rental-car' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Owner\RentalCar\RentalCarContext
+
+        owner_notification_features:
+            paths: [ '%paths.base%/features/data/owner/notification' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Owner\Notification\NotificationContext
+
+        owner_switch_to_customer_features:
+            paths: [ '%paths.base%/features/data/owner/user' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Owner\User\SwitchToCustomerContext
+
+        owner_transaction_features:
+            paths: [ '%paths.base%/features/data/owner/transaction' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Owner\Transaction\TransactionContext
+
+        owner_close_account_features:
+            paths: [ '%paths.base%/features/data/owner/close-account' ]
+            contexts:
+                - App\Tests\Behat\Core\AuthContext
+                - App\Tests\Behat\Data\Owner\CloseAccount\CloseAccountContext
+
+    extensions:
+        # use custom extension because the default one can't load env variables and symfony services
+        FriendsOfBehat\SymfonyExtension:
+            bootstrap: 'tests/bootstrap.php'

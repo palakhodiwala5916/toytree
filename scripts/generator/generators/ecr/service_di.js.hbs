@@ -1,0 +1,18 @@
+<?php
+
+namespace App\DependencyInjection\Service\Data\\{{pathCase relativePath}};
+
+use App\Service\Data\\{{pathCase relativePath}}\\{{properCase entityName}}Service;
+
+trait {{properCase entityName}}ServiceDI
+{
+    protected {{properCase entityName}}Service ${{camelCase entityName}}Service;
+
+    /**
+     * @required
+     */
+    public function set{{properCase entityName}}Service({{properCase entityName}}Service ${{camelCase entityName}}Service)
+    {
+        $this->{{camelCase entityName}}Service = ${{camelCase entityName}}Service;
+    }
+}

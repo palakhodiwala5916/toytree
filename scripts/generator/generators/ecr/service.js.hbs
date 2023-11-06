@@ -1,0 +1,45 @@
+<?php
+
+namespace App\Service\Data\\{{pathCase relativePath}};
+
+use App\Entity\\{{pathCase relativePath}}\\{{properCase entityName}};
+use App\Exception\SoftException;
+use App\Service\Data\AbstractCRUDService;
+use App\VO\Protocol\Api\\{{pathCase relativePath}}\\{{properCase entityName}}Body;
+use App\DependencyInjection\Repository\\{{pathCase relativePath}}\\{{properCase entityName}}RepositoryDI;
+use App\Repository\\{{pathCase relativePath}}\\{{properCase entityName}}Repository;
+
+final class {{properCase entityName}}Service extends AbstractCRUDService
+{
+    use {{properCase entityName}}RepositoryDI;
+
+    public function getEntityRepository(): {{properCase entityName}}Repository
+    {
+        return $this->{{camelCase entityName}}Repository;
+    }
+
+    /**
+     * @param {{properCase entityName}} ${{camelCase entityName}}
+     * @param {{properCase entityName}}Body $body
+     * @throws SoftException
+     */
+    public function updateObjectFields(${{camelCase entityName}}, $body): void
+    {
+        $this->validateObjectFields(${{camelCase entityName}}, $body);
+
+        // TODO: Implement updateObjectFields() method.
+
+        $this->saveObject(${{camelCase entityName}});
+    }
+
+    /**
+     * @param {{properCase entityName}} ${{camelCase entityName}}
+     * @param {{properCase entityName}}Body $body
+     * @throws SoftException
+     */
+    public function validateObjectFields(${{camelCase entityName}}, $body): void
+    {
+        // TODO: Implement validateObjectFields() method.
+    }
+
+}

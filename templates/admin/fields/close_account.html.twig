@@ -1,0 +1,9 @@
+{% extends '@SonataAdmin/CRUD/base_show_field.html.twig' %}
+
+{% block field %}
+    {% if value %}
+        {% for closeAccounts in value %}
+            {{ closeAccounts.reason }}
+        {% endfor %}
+    {% endif %}
+{% endblock %}

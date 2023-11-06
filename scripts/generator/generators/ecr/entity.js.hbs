@@ -1,0 +1,16 @@
+<?php
+
+namespace App\Entity\\{{pathCase relativePath}};
+
+use App\Entity\AbstractEntity;
+use App\Repository\\{{pathCase relativePath}}\\{{properCase entityName}}Repository;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity(repositoryClass={{properCase entityName}}Repository::class)
+ * @ORM\Table(name="{{tableNameCase entityName}}")
+ */
+class {{properCase entityName}} extends AbstractEntity
+{
+    // TODO: Add entity columns
+}

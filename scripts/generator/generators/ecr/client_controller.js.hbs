@@ -1,0 +1,35 @@
+<?php
+
+namespace App\Controller\Api\V1\\{{pathCase relativePath}};
+
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\DependencyInjection\Service\Data\\{{pathCase relativePath}}\\{{properCase entityName}}ServiceDI;
+use FOS\RestBundle\Controller\Annotations as Rest;
+
+/**
+ * @Rest\Route("/api/v1/{{lowerCase (dashCase entityName)}}", name="api_v1_{{lowerCase (snakeCase entityName)}}_")
+ */
+final class {{properCase entityName}}ClientController extends AbstractController
+{
+    use {{properCase entityName}}ServiceDI;
+
+    // TODO: Add new actions here
+
+//    /**
+//     * @Rest\Post("/{id}/action-name", name="action_name")
+//     * @ParamConverter("id")
+//     * @ParamConverter("query", converter="app.param_converter.request_query")
+//     * @ParamConverter("body", converter="fos_rest.request_body")
+//     * @OnlyOwner()
+//     * @Rest\View(serializerGroups={"api"})
+//     * @throws ApiException
+//     */
+//    public function actionName(Request $request, MyEntity $object, EntityActionQueryParams $query, EntityActionRequestBody $body): ApiResponseBody
+//    {
+//        // do something here
+//        $data = null;
+//
+//        return new ApiResponseBody(true, $data);
+//    }
+
+}
